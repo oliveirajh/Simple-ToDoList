@@ -57,7 +57,7 @@ function loadTasks(){ //Função para carregar as tasks salvas
     const tasksList = JSON.parse(tasks); //Converte para Objeto JS novamente
     
     for(let task in tasksList){ //Pega o valor da task na taskList
-        createTask(taskList[task]);
+        createTask(tasksList[task]);
     }
 }
 loadTasks();
