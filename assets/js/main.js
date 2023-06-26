@@ -56,8 +56,8 @@ function loadTasks(){ //Função para carregar as tasks salvas
     const tasks = localStorage.getItem('tasks')//Obtem as tasks no LocalStorage do Navegador
     const tasksList = JSON.parse(tasks); //Converte para Objeto JS novamente
     
-    for(let task of tasksList){ //Pega o valor da task na taskList
-        createTask(task)
+    for(let task in tasksList){ //Pega o valor da task na taskList
+        createTask(taskList[task]);
     }
 }
 loadTasks();
